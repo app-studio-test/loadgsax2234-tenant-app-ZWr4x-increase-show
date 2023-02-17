@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: loadgsax2234-tenant-component
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: loadgsax2234-tenant-component
+    app.kubernetes.io/part-of: loadgsax2234-tenant-app
+  name: loadgsax2234-tenant-component
+  namespace: loadgsax2234-tenant
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: loadgsax2234-tenant-component
+    weight: null
+status: {}
